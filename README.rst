@@ -182,15 +182,34 @@ To see a simple example, you can download the code `from github
 Changes
 -------
 
+master (not yet released)
+`````````````````````````
+
+- Python 3 compatibility. (#2)
+
+- Fix missing import of errno. (#2)
+
+- Swallow KrbError, not just GSSError. (#7)
+
+- Fix TypeError when we got a token but no user. (#9)
+
+- Verify that the first word of the Authorization header is "negotiate"
+  and respond with 401 if not. (#16)
+
+- Always set REMOTE_USER when valid auth is provided,
+  even for requests that don't require it. (#18)
+
+
 0.2.0
 `````
 
--     bug fixes
+- bug fixes
+
 
 0.1.0
 `````
 
--     initial implementation
+- initial implementation
 
 
 API References
